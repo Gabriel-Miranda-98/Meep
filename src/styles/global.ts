@@ -52,4 +52,29 @@ button{
 }
 
 
+.react-modal-overlay {
+    background: rgba(0,0,0,0.5);
+    position:fixed;
+    top: 0;
+    bottom:0;
+    right: 0;
+    left: 0;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.modal-content{
+    
+  width:100%;
+  max-width:576px;
+  background:#ebebeb;
+  padding:5rem;
+  position:relative;
+  border-radius:1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
+}
+
 `;

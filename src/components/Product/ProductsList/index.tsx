@@ -8,17 +8,15 @@ type Products = {
   name: string;
   image: string;
   price: string;
-  description: string;
+  descripition: string;
 };
 
-export function Products() {
+export function ProductsList() {
   const [productsItems, setProductsItems] = useState<Products[]>([]);
 
   useEffect(() => {
     api.get("products").then((response) => setProductsItems(response.data));
   }, []);
-
-  console.log(productsItems);
 
   return (
     <>
@@ -30,7 +28,7 @@ export function Products() {
               name={product.name}
               images={product.image}
               price={product.price}
-              description={product.description}
+              descripition={product.descripition}
             />
           );
         })}

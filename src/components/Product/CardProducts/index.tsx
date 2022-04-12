@@ -13,7 +13,7 @@ type productsItemsProps = {
   name: string;
   images: string;
   price: string;
-  description: string;
+  descripition: string;
 };
 
 export function CardProducts(props: productsItemsProps) {
@@ -43,7 +43,7 @@ export function CardProducts(props: productsItemsProps) {
         onCloseProductModal={handleCloseProductModal}
         product={props.name ?? "Default"}
         price={props.price ?? "R$00,0"}
-        description={props.description}
+        descripition={props.descripition}
         image={props.images ?? "none"}
       />
     </>
