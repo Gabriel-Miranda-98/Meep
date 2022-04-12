@@ -45,7 +45,12 @@ export function ModalProducts(props: ModalProps) {
         <ModalPriceAndDescription>
           {props.descripition}
         </ModalPriceAndDescription>
-        <ModalPriceAndDescription>{props.price}</ModalPriceAndDescription>
+        <ModalPriceAndDescription>
+          {new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BRL",
+          }).format(parseFloat(props.price))}
+        </ModalPriceAndDescription>
         <ProductCounter>
           <button onClick={hendleDecrementProductCounter}>-</button>
           <span>{productCounter}</span>
