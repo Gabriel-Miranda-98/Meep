@@ -1,4 +1,5 @@
-import { createGlobalStyle }  from "styled-components";
+import { createGlobalStyle } from "styled-components";
+
 import styled from "styled-components";
 import ImageIconClose from "../assets/icons8_close_window_50px_1.png";
 export const GlobalStyle = createGlobalStyle`
@@ -76,12 +77,11 @@ button{
 `;
 
 export const IconClose = styled.i`
-    cursor: pointer;
-    background: url(${ImageIconClose});
-    padding: 2rem;
-    background-repeat: no-repeat;
-    position:absolute;
-    top: 2rem;
-    right: 1.6rem;
-  
+  cursor: pointer;
+  background: url(${ImageIconClose});
+  padding: 2rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 2rem;
+  right: 1.6rem;
 `;

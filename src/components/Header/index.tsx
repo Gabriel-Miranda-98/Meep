@@ -2,22 +2,17 @@ import { useHistory } from "react-router-dom";
 import { Container, Contant } from "./styles";
 import { Routes } from "../../constants/routes/public";
 import { CartContext } from "../context";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 export function Header() {
-  const { cartProducts, openCartContext, closeCartContext } =
-    useContext(CartContext);
+  const { cartProducts, openCartContext } = useContext(CartContext);
 
   const History = useHistory();
   function hendleOnclick() {
-    History.push(Routes.Home.cart);
+    History.push(Routes.cart);
     openCartContext();
   }
-  /*
-  useEffect(() => {
-    closeCartContext();
-  }, []);
-*/
+
   return (
     <Container>
       <Contant>

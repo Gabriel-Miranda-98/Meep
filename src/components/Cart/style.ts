@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    max-width: 600px;
-    margin: 0 auto;
-    h1 {
-        text-align:center;
-    }
+  max-width: 600px;
+  margin: 0 auto;
+  h1 {
+    text-align: center;
+  }
 `;
 
 export const ContainerProduct = styled.div`
@@ -33,7 +33,7 @@ export const ContetImage = styled.div`
   display: flex;
   width: 50%;
   height: auto;
-  background-color:gray;
+  background-color: gray;
   img {
     width: 100%;
     height: auto;
@@ -65,7 +65,6 @@ export const ProductPrice = styled.div`
   margin-top: 1rem;
 `;
 
-
 export const ProductCounter = styled.div`
   margin 1rem auto;
   display: flex;
@@ -95,4 +94,40 @@ export const ProductCounter = styled.div`
     padding: 0.2rem 0.5rem;
 
   }
+
+`;
+
+export const ContentCart = styled.div`
+  background: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 1rem;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 0.5rem;
+  & > button {
+    width: 100%;
+    margin: 0.5rem 2%;
+    font-size: 1rem;
+    color: #fff;
+    background: var(--button);
+    border: 0;
+    padding: 0 0.5rem;
+    border-radius: 0.25rem;
+    height: 2rem;
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+`;
+
+export const ContetTotalCart = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 `;

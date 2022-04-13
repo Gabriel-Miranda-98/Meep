@@ -1,4 +1,5 @@
 import { createContext, ReactNode, useState } from "react";
+
 import { Cart } from "../Cart";
 type Products = {
   id: number;
@@ -37,24 +38,42 @@ export function CardProvider({ children }: CartProviderProps) {
   }
   function closeCartContext() {
     setIsOpenCart(false);
+    setCartProducts([]);
   }
 
-  /* function hendleIncrementProductCounter() {
-    setProductCounter(productCounter + 1);
+  function hendleIncrementProductCounter(id: number) {
+    const produt = cartProducts.filter((x) => x.id === id);
+    const cartProductsClone = cartProducts.filter((x) => x.id !== id);
+    produt.forEach((element) => {
+      element.productCounter++;
+    });
+    cartProductsClone.push(...produt);
+    setCartProducts(cartProductsClone);
   }
 
-  function hendleDecrementProductCounter() {
-    if (productCounter > 1) {
-      setProductCounter(productCounter - 1);
+  function hendleDecrementProductCounter(id: number) {
+    const produt = cartProducts.filter((x) => x.id === id);
+    if (produt[0].productCounter > 1) {
+      const cartProductsClone = cartProducts.filter((x) => x.id !== id);
+      produt.forEach((element) => {
+        element.productCounter--;
+      });
+      cartProductsClone.push(...produt);
+      setCartProducts(cartProductsClone);
     }
   }
-*/
+
   return (
     <CartContext.Provider
       value={{ cartProducts, AddNewProduct, openCartContext, closeCartContext }}
     >
       {children}
-      <Cart isCartOpen={isOpenCart} cartProductsItems={cartProducts} />;
+      <Cart
+        isCartOpen={isOpenCart}
+        cartProductsItems={cartProducts}
+        hendleIncrementProductCounter={hendleIncrementProductCounter}
+        hendleDecrementProductCounter={hendleDecrementProductCounter}
+      />
     </CartContext.Provider>
   );
 }

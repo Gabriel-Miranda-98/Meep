@@ -1,5 +1,3 @@
-import { Routes } from "../../../constants/routes/public";
-import { useHistory } from "react-router-dom";
 import { useState, useContext } from "react";
 import Modal from "react-modal";
 import {
@@ -24,7 +22,6 @@ type ModalProps = {
 };
 
 export function ModalProducts(props: ModalProps) {
-  const History = useHistory();
   const { AddNewProduct } = useContext(CartContext);
   const [productCounter, setProductCounter] = useState(1);
   function hendleIncrementProductCounter() {
