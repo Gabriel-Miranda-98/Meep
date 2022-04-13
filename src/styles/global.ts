@@ -76,7 +76,7 @@ button{
 `;
 
 export const IconClose = styled.i`
-   
+    cursor: pointer;
     background: url(${ImageIconClose});
     padding: 2rem;
     background-repeat: no-repeat;
