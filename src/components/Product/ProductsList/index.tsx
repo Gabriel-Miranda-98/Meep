@@ -26,6 +26,7 @@ export function ProductsList() {
         {productsItems.map((product) => {
           return (
             <CardProducts
+              key={product.id}
               id={product.id}
               name={product.name}
               images={product.image}
