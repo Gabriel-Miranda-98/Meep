@@ -50,6 +50,7 @@ export function CardProducts(props: productsItemsProps) {
         price={props.price ?? "R$00,0"}
         descripition={props.descripition}
         image={props.images ?? "none"}
+        id={props.id}
       />
     </>
   );
