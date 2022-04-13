@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { api } from "../../../services/api";
 import { CardProducts } from "../CardProducts";
 import { Container } from "./style";
+import { Header } from "../../Header";
 
 type Products = {
   id: number;
@@ -20,10 +21,12 @@ export function ProductsList() {
 
   return (
     <>
+      <Header />
       <Container>
         {productsItems.map((product) => {
           return (
             <CardProducts
+              key={product.id}
               id={product.id}
               name={product.name}
               images={product.image}

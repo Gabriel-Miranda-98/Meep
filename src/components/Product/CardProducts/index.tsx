@@ -35,7 +35,13 @@ export function CardProducts(props: productsItemsProps) {
         </ContetImage>
         <ContetInformations>
           <ProductTitle>{props.name ?? "Default"}</ProductTitle>
-          <ProductPrice>{props.price ?? "R$00,0"}</ProductPrice>
+          <ProductPrice>
+            {" "}
+            {new Intl.NumberFormat("pt-BR", {
+              style: "currency",
+              currency: "BRL",
+            }).format(parseFloat(props.price))}
+          </ProductPrice>
         </ContetInformations>
       </Container>
       <ModalProducts
@@ -45,6 +51,7 @@ export function CardProducts(props: productsItemsProps) {
         price={props.price ?? "R$00,0"}
         descripition={props.descripition}
         image={props.images ?? "none"}
+        id={props.id}
       />
     </>
   );

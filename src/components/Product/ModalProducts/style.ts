@@ -12,7 +12,7 @@ export const Title = styled.h1`
   font-weight: bold;
   font-size: 100%;
   display: inline;
-  color: #333333;
+  color: var(--text);
   margin-bottom: 1rem;
 `;
 
@@ -36,7 +36,7 @@ export const ModalPriceAndDescription = styled.h2`
   text-justify: auto;
   font-weight: bold;
   font-size: 100%;
-  color: #333333;
+  color: var(--text);
   margin-top: 1rem;
 `;
 
@@ -65,7 +65,7 @@ export const ProductCounter = styled.div`
   span {
     text-align: center;
     height: 2rem;
-    border: 1px solid #000;
+    border: 1px solid  var(--text);
     padding: 0.2rem 0.5rem;
 
   }

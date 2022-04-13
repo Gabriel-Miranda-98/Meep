@@ -1,12 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
+import styled from "styled-components";
+import ImageIconClose from "../assets/icons8_close_window_50px_1.png";
 export const GlobalStyle = createGlobalStyle`
-
 :root{
     --background: #dce5f2;
     --header: #023535;
     --Title: #015958;
-    --text: #fff;
+    --text: #707371;
     --button: #008F8C;
 
 }
@@ -65,7 +66,6 @@ button{
 }
 
 .modal-content{
-    
   width:100%;
   max-width:576px;
   background:#ebebeb;
@@ -73,8 +73,15 @@ button{
   position:relative;
   border-radius:1.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-
 }
+`;
 
+export const IconClose = styled.i`
+  cursor: pointer;
+  background: url(${ImageIconClose});
+  padding: 2rem;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 2rem;
+  right: 1.6rem;
 `;

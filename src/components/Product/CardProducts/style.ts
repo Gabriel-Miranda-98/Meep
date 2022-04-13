@@ -49,7 +49,7 @@ export const ProductTitle = styled.div`
   font-weight: bold;
   font-size: 100%;
   display: inline;
-  color: #333333;
+  color: var(--text);
   margin-bottom: 1rem;
 `;
 
@@ -58,6 +58,6 @@ export const ProductPrice = styled.div`
   text-justify: auto;
   font-weight: bold;
   font-size: 100%;
-  color: #333333;
+  color: var(--text);
   margin-top: 1rem;
 `;
