@@ -10,6 +10,8 @@ import {
   Title,
 } from "./style";
 
+import { IconClose } from "../../../styles/global";
+
 type ModalProps = {
   product: string;
   price: string;
@@ -46,6 +48,7 @@ export function ModalProducts(props: ModalProps) {
       className="modal-content"
     >
       <Container>
+        <IconClose onClick={props.onCloseProductModal}></IconClose>
         <Title>{props.product}</Title>
         <ContetImage>
           <img src={props.image} alt="" />
