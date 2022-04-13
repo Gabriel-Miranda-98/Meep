@@ -1,3 +1,5 @@
+import { Routes } from "../../../constants/routes/public";
+import { useHistory } from "react-router-dom";
 import { useState } from "react";
 import Modal from "react-modal";
 import {
@@ -18,6 +20,8 @@ type ModalProps = {
 };
 
 export function ModalProducts(props: ModalProps) {
+  const History = useHistory();
+
   const [productCounter, setProductCounter] = useState(0);
 
   function hendleIncrementProductCounter() {
@@ -28,6 +32,10 @@ export function ModalProducts(props: ModalProps) {
     if (productCounter > 1) {
       setProductCounter(productCounter - 1);
     }
+  }
+
+  function hendleOnclick() {
+    History.push(Routes.Home.cart);
   }
 
   return (
@@ -55,7 +63,7 @@ export function ModalProducts(props: ModalProps) {
           <button onClick={hendleDecrementProductCounter}>-</button>
           <span>{productCounter}</span>
           <button onClick={hendleIncrementProductCounter}>+</button>
-          <button>ADICIONAR</button>
+          <button onClick={hendleOnclick}>ADICIONAR</button>
         </ProductCounter>
       </Container>
     </Modal>
